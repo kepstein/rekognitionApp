@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AWS_Meetup_Check_in" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rH4-sk-cRX">
+                                <rect key="frame" x="47" y="391" width="280" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BNU-At-uL3"/>
+                                    <constraint firstAttribute="width" constant="280" id="XZc-ae-GyS"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.height">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJx-6T-kcx" customClass="RoundButton" customModule="AWS_Meetup_Check_in" customModuleProvider="target">
+                                <rect key="frame" x="47" y="61" width="280" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="5qN-oe-7dB"/>
+                                    <constraint firstAttribute="height" constant="280" id="Yw2-Dv-xoR"/>
+                                </constraints>
+                                <state key="normal" image="Anonymous"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="140"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.16862745100000001" green="0.40000000000000002" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ev7-1I-hmG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yh-pM-f6a">
+                                <rect key="frame" x="47" y="582" width="280" height="41"/>
+                                <color key="backgroundColor" red="0.16862745098039217" green="0.40000000000000002" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="4Ns-Ut-a1Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resetButtonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J77-g3-aan"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="tMG-YA-TzJ">
+                                <rect key="frame" x="285" y="406" width="20" height="20"/>
+                                <color key="color" red="0.16862745100000001" green="0.40000000000000002" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rH4-sk-cRX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7H8-pk-2Bn"/>
+                            <constraint firstItem="tMG-YA-TzJ" firstAttribute="top" secondItem="ZJx-6T-kcx" secondAttribute="bottom" constant="65" id="Ihx-c1-XZr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tMG-YA-TzJ" secondAttribute="trailing" constant="54" id="MtJ-Ik-z2t"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3yh-pM-f6a" secondAttribute="bottom" constant="44" id="XEM-WW-wBw"/>
+                            <constraint firstItem="ZJx-6T-kcx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="41" id="Xr0-op-iBm"/>
+                            <constraint firstItem="3yh-pM-f6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t1J-5R-P0Z"/>
+                            <constraint firstItem="rH4-sk-cRX" firstAttribute="top" secondItem="ZJx-6T-kcx" secondAttribute="bottom" constant="50" id="wZW-QH-ZYp"/>
+                            <constraint firstItem="ZJx-6T-kcx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wzt-e4-8aE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="tMG-YA-TzJ" id="Aud-e2-mKu"/>
+                        <outlet property="buttonView" destination="ZJx-6T-kcx" id="eaT-Q3-5BK"/>
+                        <outlet property="rsvpName" destination="rH4-sk-cRX" id="a39-jz-GZD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352.80000000000001" y="-38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Anonymous" width="280" height="280"/>
+    </resources>
+</document>
